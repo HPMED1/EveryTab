@@ -204,15 +204,17 @@ echo.
 echo.
 echo.
 :input
-echo     [90;1m#═╦═══════»[0m  [92m[Gamebounty.world][0m   [95m[1][0m
-echo       [90;1m╚═╦══════»[0m  [92m[Fitgirl-repacks][0m   [95m[2][0m
-echo         [90;1m╚═╦═════»[0m  [92m[Cracked-games][0m    [95m[3][0m
-echo           [90;1m╚═╦════»[0m  [92m[Torrminatorr][0m    [95m[4][0m
-echo             [90;1m╚═╦═══»[0m   [92m[Gog-games][0m     [95m[5][0m
-echo               [90;1m╚═╦═══»[0m [92m[Igg-games][0m     [95m[6][0m
-echo                 [90;1m╚═╦══»[0m  [92m[Back][0m        [95m[7][0m
-echo|set /p=".                  [90;1m╚══>[0m"
-choice /c 1234567 >nul
+echo     [90;1m#═╦═══════»[0m       [92m[Gamebounty.world][0m   [95m[1][0m
+echo       [90;1m╚═╦════════»[0m     [92m[Fitgirl-repacks][0m   [95m[2][0m
+echo         [90;1m╚═╦═══════»[0m    [92m[Skidrowreloaded][0m   [95m[3][0m
+echo           [90;1m╚═╦══════»[0m    [92m[Cracked-games][0m    [95m[4][0m
+echo             [90;1m╚═╦═════»[0m    [92m[Dodi-repacks][0m    [95m[5][0m
+echo               [90;1m╚═╦═════»[0m  [92m[Torrminatorr][0m    [95m[6][0m
+echo                 [90;1m╚═╦════»[0m   [92m[Gog-games] [0m    [95m[7][0m
+echo                   [90;1m╚═╦════»[0m [92m[Igg-games][0m     [95m[8][0m
+echo                     [90;1m╚═╦═══»[0m  [92m[Back][0m        [95m[9][0m
+echo|set /p=".                      [90;1m╚══>[0m"
+choice /c 123456789 >nul
 if /I "%errorlevel%" EQU "1" (
   start "" https://gamebounty.world
   goto :Start
@@ -222,23 +224,31 @@ if /I "%errorlevel%" EQU "2" (
   goto :Start
 )
 if /I "%errorlevel%" EQU "3" (
-  start "" https://cracked-games.org
+  start "" https://www.skidrowreloaded.com
   goto :Start
 )
 if /I "%errorlevel%" EQU "4" (
-  start "" https://torrminatorr.com
+  start "" https://cracked-games.org
   goto :Start
 )
 if /I "%errorlevel%" EQU "5" (
-  start "" https://www.gog-games.to
+  start "" https://dodi-repacks.site
   goto :Start
 )
 if /I "%errorlevel%" EQU "6" (
-  start "" https://igg-games.com
+  start "" https://torrminatorr.com
   goto :Start
 )
 if /I "%errorlevel%" EQU "7" (
+  start "" https://www.gog-games.to
   goto :Start
+)
+if /I "%errorlevel%" EQU "8" (
+  start "" https://igg-games.com
+  goto :Start
+)
+if /I "%errorlevel%" EQU "9" (
+goto :Start
 )
 :Torrents
 cls
